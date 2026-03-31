@@ -69,8 +69,11 @@ const LoginPage = () => {
     e.preventDefault();
 
     const newErrors: ErrorObject = {};
-    const isValidEmail = formData.email.includes('2983@gmail.com');
-    const isValidPassword = formData.password === '241712983';
+    const emailPattern = /^[0-9]+@gmail\.com$/;
+    const passwordPattern = /^[0-9]{9,}$/;
+
+    const isValidEmail = emailPattern.test(formData.email);
+    const isValidPassword = passwordPattern.test(formData.password);
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email tidak boleh kosong';

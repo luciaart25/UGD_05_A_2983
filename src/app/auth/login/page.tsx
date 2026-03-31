@@ -178,7 +178,7 @@ const LoginPage = () => {
               Ingat saya
             </label>
           </div>
-          <Link href="/auth/forgot-password" size="sm" className="text-sm font-medium text-blue-600 hover:text-blue-500">
+          <Link href="/auth/forgot-password" className="text-sm font-medium text-blue-600 hover:text-blue-500">
             Lupa password?
           </Link>
         </div>
